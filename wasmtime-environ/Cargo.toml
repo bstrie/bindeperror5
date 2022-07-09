@@ -1,0 +1,8 @@
+[package]
+name = "wasmtime-environ"
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+indexmap = { path = "../indexmap", features = ["serde"] }
+serde = { path = "../serde" }

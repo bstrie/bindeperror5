@@ -1,0 +1,11 @@
+[package]
+name = "mycrate"
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+indexmap = { path = "indexmap" }
+# removing `features` key causes code to compile
+serde = { path = "serde", features = ["alloc"] }
+# removing `lib` key or `target` key causes code to compile
+wasmtime-environ = { path = "wasmtime-environ", lib = true, artifact = "bin", target = "x86_64-unknown-linux-gnu" }
